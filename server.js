@@ -5,12 +5,13 @@ const cors = require("cors");
 
 const app =express();
   
-
-app.use(express.json());
-require("dotenv").config();
 // appel cors
 app.use(cors());
-app.options("*", cors());
+app.options(/.*/, cors());
+app.use(express.json());
+require("dotenv").config();
+
+
 // connect db 
 
 
