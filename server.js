@@ -1,4 +1,6 @@
 const express=require("express");
+const cors = require("cors");  
+
 // creation d'instance 
 
 const app =express();
@@ -6,8 +8,8 @@ const app =express();
 
 app.use(express.json());
 require("dotenv").config();
-
-
+// appel cors
+app.use(cors());
 
 // connect db 
 
